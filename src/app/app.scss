@@ -1,0 +1,87 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.toolbar-background {
+    background-color: #ffffff;
+}
+
+.content-md {
+    background-color: #f8f8f8;
+}
+
+.div-head{
+    color:color($colors-md,light);
+    img{
+        width: 60%;
+    }
+    h1{
+        font-weight: 600;
+        margin:0px;
+    }
+    p{
+        margin: 0;
+        font-weight: 300;
+
+    }
+}
+.div-content{
+    background-color: #ffffff;
+    border: solid 1px #ccc;
+    height: 100%;
+    margin: 0px -8px;
+    padding: 20px;
+    box-shadow: 1px 1px 1px #ccc;
+    overflow-y: scroll;
+}
+
+//CSS Select Cambio de color del icono
+.select-md .select-icon .select-icon-inner {
+    color: color($colors-md,secondary);
+}
+//CSS Input y label
+input{
+    text-align: center;
+}
+
+.item-md {
+   color:color($colors-md,light);
+   text-align: center;
+   margin: 5px 0px;
+   padding-left: 0px;
+ }
+
+.item-md.item-block .item-inner {
+    padding: 0px;
+}
+.item-label-stacked ion-label, .item-label-floating ion-label {
+    color: color($colors-md,secondary)!important;
+    font-weight: 600;
+    width: 100%;
+    margin: 13px 0px 13px 0px;
+}
+
+//CSS Button
+.btn-submit{
+    margin-top: 30px;
+    text-transform: none;
+    width: 60%;
+}
+//CSS Alert
+.alert-md .alert-sub-title {
+    font-size: 16px;
+    text-align: justify;
+}

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title></ion-title>
+      <ion-buttons end>
+        <button class="btn-top btn-chat" clear icon-only ion-button>
+          <ion-icon button-end name='md-share' color="dark"></ion-icon>
+        </button>
+        <button class="btn-top btn-chat" clear icon-only ion-button>
+            <ion-icon button-end name='ios-bookmark-outline' color="dark"></ion-icon>
+        </button>
+        <button class="btn-top btn-chat" clear icon-only ion-button>
+            <ion-icon button-end name='md-more'color="dark"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="div-content">
+    <div class="div-head" text-center>
+      <img src="../assets/imgs/logoIJ.png"/>
+      <h1>1/2</h1>
+      <p>Datos Personales</p>
+    </div>
+
+    <form [formGroup]="form_step1" (ngSubmit)="registerForm()">
+      <ion-row justify-content-center>
+      <ion-col col-auto text-center>
+      <ion-item>
+        <ion-label stacked>Nombre</ion-label>
+        <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Apellido</ion-label>
+        <ion-input type="text" formControlName="lastName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Genero</ion-label>
+        <ion-select formControlName="gender">
+            <ion-option value="F">Femenino</ion-option>
+            <ion-option value="M">Masculino</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Fecha de Nacimiento</ion-label>
+        <ion-datetime formControlName="birthDate" displayFormat="DD-MM-YYYY" placeholder="DD-MM-YYYY"></ion-datetime>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+      <button ion-button round type="submit" [disabled]="!form_step1.valid" class="btn-submit">Siguiente</button>
+    </form>
+  </div>
+</ion-content>
